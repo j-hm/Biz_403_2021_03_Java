@@ -35,4 +35,12 @@
 7. 로컬 저장소에 있는 파일들을 원격 저장소로 업로드 하라
  	-> git push https://github.com/j-hm/Biz_403_2021_03_Java.git master
 
- 	https://github.com/j-hm/Biz_403_2021_03_Java.git
+## 원격저장소와 연결된 프로젝트에 새로운 코드 추가하기
+
+* gid add .
+* git commit -m "어쩌고"
+* git push https://github.com/j-hm/Biz_403_2021_03_Java.git master
+
+## 원격저장소 주소를 단축하여 입력하기
+1. 원격저장소 주소를 별명으로 설정하기
+ * git remote add greeng https://github.com/j-hm/Biz_403_2021_03_Java.git
