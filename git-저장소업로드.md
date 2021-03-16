@@ -44,3 +44,6 @@
 ## 원격저장소 주소를 단축하여 입력하기
 1. 원격저장소 주소를 별명으로 설정하기
  * git remote add greeng https://github.com/j-hm/Biz_403_2021_03_Java.git
+
+   greeng(원격저장소 주소)
+ * 앞으로 git push만 하면 됨 
