@@ -1,6 +1,6 @@
 package com.callor.controller;
 
-public class Cout_05 {
+public class Cont_05 {
 	public static void main(String[] args) {
 		
 		String strName = "";
