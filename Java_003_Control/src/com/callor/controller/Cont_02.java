@@ -1,7 +1,7 @@
 package com.callor.controller;
 /*
  * 명령어
- *  : 코딩을 할 때 반드시 정확한 스펠리으로 사용해야하는 
+ *  : 코딩을 할 때 반드시 정확한 스펠링으로 사용해야하는 
  *    중요한 키워드(keyword)들
  *    
  *  명령문(statement/명령구문)
