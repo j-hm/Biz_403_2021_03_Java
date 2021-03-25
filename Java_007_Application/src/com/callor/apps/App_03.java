@@ -13,17 +13,19 @@ public class App_03 {
 		psVA.makeNums();
 		psVB.makeNums();
 
+		System.out.println("=========================");
 		System.out.println(psV1);
+		System.out.println("-------------------------");
 		psVA.printPrime();
 
 		System.out.println("=========================");
-
 		System.out.println(psVA);
+		System.out.println("-------------------------");
 		psVA.printPrime();
 
 		System.out.println("=========================");
-
 		System.out.println(psVB);
+		System.out.println("-------------------------");
 		psVA.printPrime();
 	}
 

@@ -39,71 +39,48 @@ import java.util.Random;
 // 메서드를 만들어 분리하고
 // 코드관리를 쉽게하도록 하는 클래스(파일)들
 public class PrimeServiceV1 {
-	
+
 	// 어떤 변수를 사용하여 프로젝트를 수행할 것인가
 	// 여러(2개이상)의 메서드에서 공통으로 사용할 변수들은
-	//			변수를 사용한다, 참조한다 : 저장, 읽기
+	// 변수를 사용한다, 참조한다 : 저장, 읽기
 	// 클래스 영역에 설정한다
 	int[] intNums;
-	
+
 	// 생성자 (constructor) 메서드
-	// 		- void 키워드를 사용하지 않는다
-	// 		- 이름이 클래스와 같다
+	// - void 키워드를 사용하지 않는다
+	// - 이름이 클래스와 같다
 	// intNums배열을 설정(초기화, 개수지정)을 하여 사용할 준비
 	public PrimeServiceV1() {
 		intNums = new int[20];
 	}
+
 	// (일반) 메서드는 첫글자 소문자로 시작하여 lowerCamelCase
 	// 변수 이름짓기와 같은 방식으로 생성
-	// 랜덤클래스로 값을 만들어서 저장
-	public void makeNums() { 
+	// Random클래스로 값을 만들어서 저장
+	public void makeNums() {
 		Random rnd = new Random();
-		
-		for(int i =0; i < intNums.length; i++) {
-			intNums[i] = rnd.nextInt(50);
+
+		for (int i = 0; i < intNums.length; i++) {
+			intNums[i] = rnd.nextInt(51) + 50;
 		}
 	}
-	
-	// 저장된 값이 프라임인지 검사하여 출력하기
-	public void printPrime() { 
-		
-		for(int arr = 0; arr<intNums.length; arr++) {
+
+	// 저장된 값이 Prime인지 검사하여 출력하기
+	public void printPrime() {
+
+		for (int arr = 0; arr < intNums.length; arr++) {
 			int numP = intNums[arr];
 			int num = 0;
-			for (num = 2;num<numP;num++) {
-				if(numP%num==0) {
+			for (num = 2; num < numP; num++) {
+				if (numP % num == 0) {
 					break;
 				}
 			}
-			if(num<numP) {
+			if (num < numP) {
 				System.out.println(intNums[arr] + "소수가 아님");
-			}else { 
+			} else {
 				System.out.println(intNums[arr] + "소수임");
 			}
 		}
-		
 	}
-	// 
-	
-	
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
