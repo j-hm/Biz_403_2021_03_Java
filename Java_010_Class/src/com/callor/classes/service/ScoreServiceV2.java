@@ -42,6 +42,7 @@ public class ScoreServiceV2 extends ScoreServiceV1 {
 		return intScore;
 	} // inputScore(String strNum)
 
+	
 	public Integer inputScore() {
 
 		String[] strSubject = { "국어", "영어", "수학" };
