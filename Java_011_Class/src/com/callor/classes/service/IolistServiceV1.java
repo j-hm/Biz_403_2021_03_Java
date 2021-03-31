@@ -53,19 +53,27 @@ public class IolistServiceV1 {
 			System.out.println("-".repeat(50));
 			System.out.println("1. 매입매출 등록");
 			System.out.println("2. 매입매출 리스트 출력");
-			System.out.println("0. 업무종료");
+			System.out.println("QUIT. 업무종료");
 			System.out.println("=".repeat(50));
 			System.out.print("업무선택>> ");
-			int intMenu = scan.nextInt();
-
+			String strMenu = scan.nextLine();
+			if(strMenu.equals("QUIT")) {
+				break;
+			}
+			Integer intMenu = 0;
+			try {
+				intMenu = Integer.valueOf(strMenu);
+			} catch (Exception e) {
+				System.out.println("메뉴 선택 오류");
+				System.out.println("메뉴는 1~2까지, QUIT만 입력가능");
+				continue;
+			}
+			
 			if (intMenu == 1) {
 				this.input();
 			} else if (intMenu == 2) {
 				this.printAllList();
-			} else if (intMenu == 0) {
-				System.out.println("업무가 종료되었습니다!");
-				return; // while문이 한번 뿐이라 break;도 사용가능하긴함
-			}
+			} 
 		} // end while
 	}
 
@@ -84,7 +92,7 @@ public class IolistServiceV1 {
 		String dname = scan.next();
 
 		System.out.println("매입매출 구분>> ");
-		String input = scan.next();
+		String inout = scan.next();
 
 		System.out.println("수량>> ");
 		Integer qty = scan.nextInt();
@@ -99,7 +107,7 @@ public class IolistServiceV1 {
 		iolistVO.setPname(pname);
 		iolistVO.setDate(date);
 		iolistVO.setDname(dname);
-		iolistVO.setInout(input);
+		iolistVO.setInout(inout);
 		iolistVO.setQty(qty);
 		iolistVO.setIprice(iprice);
 		iolistVO.setOprice(oprice);
