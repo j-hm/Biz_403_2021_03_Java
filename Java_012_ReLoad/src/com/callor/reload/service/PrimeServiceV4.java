@@ -35,10 +35,13 @@ public class PrimeServiceV4 {
 		System.out.println("=".repeat(20));
 		System.out.println("소수 리스트");
 		System.out.println("-".repeat(20));
-		for (int i = 0; i < primeList.size(); i++) {
-			Integer rndNum = primeList.get(i);
-			System.out.println(rndNum);
+		for (Integer prime : primeList) {
+			System.out.println(prime);
 		}
+//		for (int i = 0; i < primeList.size(); i++) {
+//			Integer rndNum = primeList.get(i);
+//			System.out.println(rndNum);
+//		}
 		System.out.println("=".repeat(20));
 	}
 }
