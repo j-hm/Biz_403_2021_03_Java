@@ -25,6 +25,10 @@ public class MenuServiceImplV1 implements MenuService {
 	 * MenuServiceImplV1 클래스를 사용하여 객체를 생성할 때는
 	 * title 변수와 menuList에 값을 담아서 파라메터로 전달하고
 	 * 생성자를 호출해야 한다
+	 * 
+	 * new MenuServiceImplV1()형식 안됨
+	 * 무조건 변수 값넣어서
+	 * MenuServiceImplV1(title, List<String> menuList)형식으로 작성해야함
 	 */
 	public MenuServiceImplV1(String title, List<String> menuList) {
 
