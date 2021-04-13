@@ -6,6 +6,7 @@ import java.util.List;
 import com.callor.score.service.ScoreService;
 import com.jhm.standard.InputService;
 import com.jhm.standard.MenuService;
+import com.jhm.standard.impl.InputServiceImplV1;
 import com.jhm.standard.impl.MenuServiceImplV1;
 
 public class ScoreServiceImplV1 implements ScoreService {
@@ -16,6 +17,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	public ScoreServiceImplV1() {
 		scoreMenu = new ArrayList<String>();
+		inService = new InputServiceImplV1();
 	}
 
 	@Override
@@ -35,6 +37,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 				System.out.println("업무 종료!");
 				break;
 			}
+			
 			if (menu == 1) {
 				this.inputName();
 			} else if (menu == 2) {
