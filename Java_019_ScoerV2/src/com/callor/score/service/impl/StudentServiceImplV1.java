@@ -78,7 +78,7 @@ public class StudentServiceImplV1 implements StudentService {
 				studentVO.setDept(students[학과]);
 				studentVO.setAddress(students[주소]);
 				
-				System.out.println(studentVO.toString()); //리스트 담긴 값 확인용 코드
+//				System.out.println(studentVO.toString()); //리스트 담긴 값 확인용 코드
 				studentList.add(studentVO);
 			}
 			buffer.close();
@@ -94,17 +94,20 @@ public class StudentServiceImplV1 implements StudentService {
 
 	@Override
 	public StudentVO getStudent(String num) {
-		// TODO Auto-generated method stub
+		// TODO 학번으로 학생조회 후 정보 리턴
 		int nSize = studentList.size();
 		for(int i = 0; i < nSize; i++) {
 			StudentVO vo = studentList.get(i);
 			if(num.equalsIgnoreCase(vo.getNum())) {
 				//리턴값을 담고 리턴
-//				System.out.println(vo);
 				return vo;
 			}
 		}
-//		System.out.println("![" + num + "]번은 등록되지 않은 학생입니다!");
+		
+		// 새로운 for 향상된 for (forEach)
+//		for(StudentVO vo : studentList) {
+//			if(num.equalsIgnoreCase(vo.getNum())) return vo;
+//		}
 		return null;
 	}
 

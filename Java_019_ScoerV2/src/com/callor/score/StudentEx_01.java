@@ -1,5 +1,6 @@
 package com.callor.score;
 
+import com.callor.score.domain.StudentVO;
 import com.callor.score.service.StudentService;
 import com.callor.score.service.impl.StudentServiceImplV1;
 
@@ -15,6 +16,10 @@ public class StudentEx_01 {
 					= new StudentServiceImplV1("src/com/callor/score/st.txt"); // 다른 파일을 열 수 있음
 		stService.printStudent();
 
-		stService.getStudent("00007");
+		StudentVO info = stService.getStudent("00007");
+		if(info == null) {
+			System.out.println("등록되지 않은 학생입니다");
+		}
+		System.out.println(info);
 	}
 }
