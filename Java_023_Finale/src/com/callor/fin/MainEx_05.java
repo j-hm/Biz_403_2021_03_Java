@@ -16,14 +16,14 @@ public class MainEx_05 {
 		for (int i = 0; i < nums.length; i++) {
 			int index = 0;
 			for (index = 2; index < nums.length; index++) {
-				if(? % ?? == 0) {
+				if(nums[i] % index == 0) {
 					break;
 				}
 			}
-			if(? < ??) {
-				System.out.println();
+			if(i < nums[i]) {
+				System.out.println("소수아님");
 			} else {
-				System.out.println();
+				System.out.println("소수");
 			}
 		}
 	}
